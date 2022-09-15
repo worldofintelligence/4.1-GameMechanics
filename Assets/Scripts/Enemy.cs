@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     private GameObject[] enemy;
     private PlayerController playerController;
+     public bool isground= true;
     private void Awake()
     {
         scalechange = new Vector3(0.1f, 0.1f, 0.1f);
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
         {
             gameObject.transform.localScale += scalechange;
             hitcount++;
+
         }
     }
     private void OnTriggerEnter(Collider other)

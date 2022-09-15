@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;  
 public class Leaderboard : MonoBehaviour
 {
     public TMP_Text rank1;
@@ -22,6 +22,8 @@ public class Leaderboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rank1 = playerController.leaderboard[5];
+        rank1.text = playerController.leaderboard[5].ToString();
+        rank2.text = playerController.leaderboard[4].ToString();
+        rank3.text = playerController.leaderboard[3].ToString();
     }
 }
